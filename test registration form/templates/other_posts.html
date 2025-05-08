@@ -1,0 +1,39 @@
+{% include "header.html" %}
+
+<!--Page Header-->
+<header class="masthead" style="background-image: url('https://images.unsplash.com/photo-1508973379184-7517410fb0bc?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
+   <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>HipHop juice in South Africa</h1>
+            <span class="subheading">What is going on in the world of media.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+<!--Posts Content-->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        {% for post in range(10) %}
+        <div class="post-preview">
+          <a href="{{links[post]}}">
+            <h2 class="post-title">
+              {{blogs[post]}}
+            </h2></a>
+            <a class="btn btn-outline-secondary float-center" href="{{links[post]}}"> Read More</a>
+
+          <p class="post-meta">Posted by <a href="https://sahiphopmag.co.za/">SaHipHopMag</a> on {{dates[post]}}</p>
+        </div>
+        <hr>
+        {% endfor %}
+
+      </div>
+    </div>
+  </div>
+
+{% include "footer.html" %}
