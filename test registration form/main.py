@@ -3,12 +3,12 @@ from bs4 import BeautifulSoup
 import smtplib
 import requests
 
-OWN_EMAIL = "mancaveeatdrink@gmail.com"
-OWN_PASSWORD = "riptzznynmchnneu"
+OWN_EMAIL = "Enter email to send"
+OWN_PASSWORD = "Enter password linked to email"
 
 
 #Playas Park Blog Url
-posts = requests.get("https://api.npoint.io/022c094f633c350fe1df").json()
+posts = requests.get("link your json file url here").json()
 
 respond = requests.get("https://sahiphopmag.co.za/")
 web_page = respond.text
